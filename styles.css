@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#status-bar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#game-container {
+    flex-grow: 1;
+    overflow-y: auto;
+}

@@ -19,3 +19,10 @@ body {
     flex-grow: 1;
     overflow-y: auto;
 }
+
+.options-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}

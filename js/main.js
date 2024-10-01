@@ -1,4 +1,5 @@
 import Game from './game.js';
+import gameData from './data.js';
 
 let app;
 
@@ -13,7 +14,7 @@ function init() {
 
     gameContainer.appendChild(app.view);
 
-    const game = new Game(app);
+    const game = new Game(app, gameData);
     game.start();
 
     // Handle window resizing

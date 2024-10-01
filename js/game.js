@@ -1,7 +1,10 @@
+import gameData from './data.js';
+
 class Game {
-    constructor(app) {
+    constructor(app, gameData) {
         this.app = app;
-        this.currentScene = 0;
+        this.gameData = gameData;
+        this.currentScene = "beginning";
         this.textContainer = new PIXI.Container();
         this.choicesContainer = new PIXI.Container();
         
@@ -10,11 +13,15 @@ class Game {
 
         this.lastTextY = 20;
 
+        // Initialize Profit and Legitimacy
+        this.profit = 50;
+        this.legitimacy = 50;
+
         // Set up scrolling
         this.setupScrolling();
 
-        // Remove this line
-        // this.createButtons();
+        // Update status bar
+        this.updateStatusBar();
     }
 
     setupScrolling() {
@@ -49,8 +56,10 @@ class Game {
         this.showScene(this.currentScene);
     }
 
-    showScene(sceneIndex) {
-        const scene = gameData[sceneIndex];
+    showScene(sceneId) {
+        const scene = this.gameData.find(s => s.id === sceneId);
+        console.log("Current scene:", scene); // Debugging
+
         this.choicesContainer.removeChildren();
 
         // Create a message block
@@ -73,7 +82,10 @@ class Game {
             
             button.interactive = true;
             button.cursor = 'pointer';
-            button.on('pointerdown', () => this.makeChoice(choice.next));
+            button.on('pointerdown', () => {
+                console.log("Choice made:", choice); // Debugging
+                this.makeChoice(choice.next, choice.profitChange, choice.legitimacyChange);
+            });
 
             // Position buttons
             if (index === 0) {
@@ -149,9 +161,26 @@ class Game {
         return container;
     }
 
-    makeChoice(nextScene) {
+    makeChoice(nextScene, profitChange, legitimacyChange) {
+        console.log("makeChoice called with:", nextScene, profitChange, legitimacyChange); // Debugging
+
+        // Ensure profitChange and legitimacyChange are numbers
+        profitChange = Number(profitChange) || 0;
+        legitimacyChange = Number(legitimacyChange) || 0;
+
+        this.profit += profitChange;
+        this.legitimacy += legitimacyChange;
+
+        console.log("Updated values:", this.profit, this.legitimacy); // Debugging
+
         this.currentScene = nextScene;
+        this.updateStatusBar();
         this.showScene(this.currentScene);
+    }
+
+    updateStatusBar() {
+        const statusBar = document.getElementById('status-bar');
+        statusBar.innerHTML = `Profit: ${Math.round(this.profit)} | Legitimacy: ${Math.round(this.legitimacy)}`;
     }
 
     scrollToBottom() {

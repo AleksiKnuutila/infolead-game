@@ -133,7 +133,16 @@ const gameData = [
         type: "section_break",
         text: "You have completed the first section on content moderation dilemmas. To read more about the topic, click here...",
         choices: [
-            { text: "Continue", next: 0 },
+            { text: "Continue", next: 31 },
+        ]
+    },
+    {
+        id: 31,
+        type: "section_break",
+        text: "You have reached the end of the game! You gained 1,234 points in total! Can your friend beat you?",
+        choices: [
+            { text: "Share with friends", next: 0 },
+            { text: "Play again", next: 0 },
         ]
     },
     // ... Add more scenarios as needed

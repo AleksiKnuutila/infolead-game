@@ -1,7 +1,7 @@
 const gameData = [
     {
         id: "beginning",
-        type: "section",
+        type: "section_break",
         text: "Welcome to social media middle management! Can you steer your platform without getting into a crisis?",
         choices: [
             { text: "Start the game", next: 0 },

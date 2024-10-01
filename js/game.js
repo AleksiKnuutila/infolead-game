@@ -7,9 +7,10 @@ class Game {
         this.currentScene = "beginning";
         this.textContainer = new PIXI.Container();
         this.choicesContainer = new PIXI.Container();
-        
+        this.sectionBreakContainer = new PIXI.Container();
         this.app.stage.addChild(this.textContainer);
         this.app.stage.addChild(this.choicesContainer);
+        this.app.stage.addChild(this.sectionBreakContainer);
 
         this.lastTextY = 20;
 
@@ -52,7 +53,8 @@ class Game {
         this.choicesContainer.y = this.textContainer.y;
     }
 
-    start() {
+    start(startScene = "beginning") {
+        this.currentScene = startScene;
         this.showScene(this.currentScene);
     }
 
@@ -60,7 +62,69 @@ class Game {
         const scene = this.gameData.find(s => s.id === sceneId);
         console.log("Current scene:", scene); // Debugging
 
+        if (scene.type === "section_break") {
+            this.showSectionBreak(scene);
+        } else {
+            this.showChatScene(scene);
+        }
+    }
+
+    showSectionBreak(scene) {
+        this.sectionBreakContainer.removeChildren();
+        this.textContainer.removeChildren();
         this.choicesContainer.removeChildren();
+
+        const text = new PIXI.Text(scene.text, {
+            fontFamily: 'Arial',
+            fontSize: 24,
+            fill: 0x000000,
+            align: 'center',
+            wordWrap: true,
+            wordWrapWidth: this.app.screen.width - 100
+        });
+        text.anchor.set(0.5);
+        text.x = this.app.screen.width / 2;
+        text.y = this.app.screen.height / 2 - 50;
+
+        const button = this.createSectionBreakButton(scene.choices[0]);
+        button.x = this.app.screen.width / 2;
+        button.y = this.app.screen.height / 2 + 50;
+
+        this.sectionBreakContainer.addChild(text);
+        this.sectionBreakContainer.addChild(button);
+    }
+
+    createSectionBreakButton(choice) {
+        const button = new PIXI.Container();
+
+        const background = new PIXI.Graphics();
+        background.beginFill(0x4CAF50);
+        background.drawRoundedRect(0, 0, 200, 50, 10);
+        background.endFill();
+
+        const text = new PIXI.Text(choice.text, {
+            fontFamily: 'Arial',
+            fontSize: 18,
+            fill: 0xFFFFFF
+        });
+        text.anchor.set(0.5);
+        text.x = 100;
+        text.y = 25;
+
+        button.addChild(background);
+        button.addChild(text);
+
+        button.interactive = true;
+        button.buttonMode = true;
+        button.on('pointerdown', () => {
+            this.makeChoice(choice.next);
+        });
+
+        return button;
+    }
+
+    showChatScene(scene) {
+        this.sectionBreakContainer.removeChildren();
 
         // Create a message block
         const messageBlock = this.createMessageBlock(scene.text);

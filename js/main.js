@@ -15,7 +15,7 @@ function init() {
     gameContainer.appendChild(app.view);
 
     const game = new Game(app, gameData);
-    game.start();
+    game.start("beginning"); // Start with the beginning screen
 
     // Handle window resizing
     window.addEventListener('resize', () => {

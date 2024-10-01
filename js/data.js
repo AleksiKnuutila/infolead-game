@@ -100,8 +100,7 @@ const gameData = [
         text: "You've decided to stand by the current policy. This decision has boosted short-term profits, but has been criticized by the public and experts, decreasing your legitimacy.",
         type: "choice",
         choices: [
-            { text: "Launch a PR campaign to mitigate backlash", next: 26, profitChange: -5, legitimacyChange: 10 },
-            { text: "Double down on current strategies", next: 27, profitChange: 10, legitimacyChange: -5 }
+            { text: "Oh great", next: 30, profitChange: 0, legitimacyChange: 0 },
         ]
     },
     {
@@ -118,8 +117,7 @@ const gameData = [
         text: "You've decided to hire more people to improve moderation. This decision has been well-received by the public and experts, increasing your legitimacy. However, the increased operational costs have affected short-term profits.",
         type: "choice",
         choices: [
-            { text: "Focus on long-term benefits", next: 30, profitChange: 0, legitimacyChange: 10 },
-            { text: "Implement cost-cutting measures to recover", next: 31, profitChange: 10, legitimacyChange: -5 }
+            { text: "Oh great", next: 30, profitChange: 0, legitimacyChange: 0 },
         ]
     },
     {
@@ -127,8 +125,15 @@ const gameData = [
         text: "You've decided to improve enforcement of Meta’s Hate Speech policy with relevant cultural context. This decision has been well-received by the public and experts, increasing your legitimacy. However, the changes have caused some operational costs, affecting short-term profits.",
         type: "choice",
         choices: [
-            { text: "Focus on long-term benefits", next: 30, profitChange: 0, legitimacyChange: 10 },
-            { text: "Implement cost-cutting measures to recover", next: 31, profitChange: 10, legitimacyChange: -5 }
+            { text: "Oh great", next: 30, profitChange: 0, legitimacyChange: 0 },
+        ]
+    },
+    {
+        id: 30,
+        type: "section_break",
+        text: "You have completed the first section on content moderation dilemmas. To read more about the topic, click here...",
+        choices: [
+            { text: "Continue", next: 0 },
         ]
     },
     // ... Add more scenarios as needed

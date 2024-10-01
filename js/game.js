@@ -74,6 +74,9 @@ class Game {
         this.textContainer.removeChildren();
         this.choicesContainer.removeChildren();
 
+        // Reset lastTextY for the next chat scene
+        this.lastTextY = 20;
+
         const text = new PIXI.Text(scene.text, {
             fontFamily: 'Arial',
             fontSize: 24,
@@ -135,7 +138,15 @@ class Game {
         this.lastTextY = messageBlock.y + messageBlock.height + 20;
 
         // Display choices
-        scene.choices.forEach((choice, index) => {
+        this.displayChoices(scene.choices);
+
+        this.scrollToBottom();
+    }
+
+    displayChoices(choices) {
+        this.choicesContainer.removeChildren();
+
+        choices.forEach((choice, index) => {
             const button = new PIXI.Text(choice.text, {
                 fontFamily: 'Arial',
                 fontSize: 16,
@@ -168,8 +179,6 @@ class Game {
 
         // Update lastTextY to include the height of the buttons
         this.lastTextY += 40; // Adjust this value as needed
-
-        this.scrollToBottom();
     }
 
     createMessageBlock(text) {

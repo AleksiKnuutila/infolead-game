@@ -23,6 +23,9 @@ class Game {
 
         // Update status bar
         this.updateStatusBar();
+
+        // Resize the game renderer
+        this.app.renderer.resize(this.app.screen.width, this.app.screen.height);
     }
 
     setupScrolling() {
@@ -264,6 +267,13 @@ class Game {
             this.textContainer.y = -offset;
             this.choicesContainer.y = -offset;
         }
+    }
+
+    resizeGame() {
+        const gameContainer = document.getElementById('game-container');
+        this.app.renderer.resize(gameContainer.clientWidth, gameContainer.clientHeight);
+        // Recalculate positions of elements if needed
+        this.showScene(this.currentScene);
     }
 }
 

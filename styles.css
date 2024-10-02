@@ -1,10 +1,11 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    align-items: center;
+    background-color: #f0f0f0; /* Light gray background */
 }
 
 #status-bar {
@@ -13,11 +14,23 @@ body {
     padding: 10px;
     text-align: center;
     font-family: Arial, sans-serif;
+    width: 100%;
 }
 
 #game-container {
     flex-grow: 1;
     overflow-y: auto;
+    width: 100%;
+    max-width: 800px; /* Limit maximum width */
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1200px) {
+    #game-container {
+        width: 66%; /* Take up 2/3 of the screen on large displays */
+    }
 }
 
 .options-container {

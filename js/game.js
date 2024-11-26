@@ -132,6 +132,16 @@ class Game {
     showChatScene(scene) {
         this.sectionBreakContainer.removeChildren();
 
+        // Reset scroll position when coming from a section break
+        this.textContainer.y = 0;
+        this.choicesContainer.y = 0;
+
+        // Only reset lastTextY if this is the first message after a section break
+        const previousScene = this.gameData.find(s => s.id === this.currentScene);
+        if (previousScene && previousScene.type === 'section_break') {
+            this.lastTextY = 20;
+        }
+
         // Create a message block
         const messageBlock = this.createMessageBlock(scene.text);
         messageBlock.y = this.lastTextY;
@@ -143,7 +153,10 @@ class Game {
         // Display choices
         this.displayChoices(scene.choices);
 
-        this.scrollToBottom();
+        // Only scroll if not coming from a section break
+        if (!previousScene || previousScene.type !== 'section_break') {
+            this.scrollToBottom();
+        }
     }
 
     displayChoices(choices) {

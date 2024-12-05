@@ -22,7 +22,7 @@ const gameData =
     {
         "id": "1",
         "type": "choice",
-        "text": "Great to meet you! I'm Jamie, the HR director. You're here to start your new position as VP of Information Disorder Responses at Connectopia, America's fastest-growing social media platform. Excited to have you on board!",
+        "text": "Great to meet you! You're here to start your new position as VP of Information Disorder Responses at Connectopia, America's fastest-growing social media platform. My name is Jamie, I will be working as your assistant. Excited to have you on board!",
         "choices": [
             {
                 "text": "Thanks, I'm excited to be here!",
@@ -69,8 +69,8 @@ const gameData =
                 "legitimacyChange": 0
             },
             {
-                "text": "Why is this controversial?",
-                "next": "22",
+                "text": "Why is a poem controversial?",
+                "next": "21",
                 "profitChange": 0,
                 "legitimacyChange": 0
             }
@@ -84,12 +84,6 @@ const gameData =
             {
                 "text": "Why is this causing controversy?",
                 "next": "22",
-                "profitChange": 0,
-                "legitimacyChange": 0
-            },
-            {
-                "text": "What happened with the post?",
-                "next": "24",
                 "profitChange": 0,
                 "legitimacyChange": 0
             }
@@ -193,7 +187,7 @@ const gameData =
     {
         "id": "26",
         "type": "choice",
-        "text": "Well, here's the thing. Our Oversight Board has reviewed the situation and ruled against our earlier decision to remove the content. We need to decide how to handle this.",
+        "text": "Well, here's the thing. Our Connectopia Oversight Board has reviewed the situation and ruled against our earlier decision to remove posts containing the poem. We need to decide how to handle this.",
         "choices": [
             {
                 "text": "What's the Oversight Board?",
@@ -212,7 +206,7 @@ const gameData =
     {
         "id": "26a",
         "type": "choice",
-        "text": "This case has been escalated to you because our Oversight Board has reviewed it and ruled against our earlier decision to remove the content. It's a big deal.",
+        "text": "This case has been escalated to you because our Connectopia Oversight Board has reviewed it and ruled against our earlier decision to remove the content. It's a big deal.",
         "choices": [
             {
                 "text": "What's the Oversight Board?",
@@ -231,7 +225,7 @@ const gameData =
     {
         "id": "27",
         "type": "choice",
-        "text": "The Oversight Board is an independent body that reviews our content moderation decisions. They make binding decisions on whether specific content should be allowed or removed.",
+        "text": "The Connectopia Oversight Board is an independent body that reviews our content moderation decisions. They make recommendations on, for instance, whether specific content should be allowed or removed. The recommendations are binding, at least in principle..",
         "choices": [
             {
                 "text": "What are our options?",
@@ -253,14 +247,14 @@ const gameData =
         "text": "We have two main options here. We can either stand by our original policy or revise it to account for cultural context. What do you think?",
         "choices": [
             {
-                "text": "Stand by our original policy",
+                "text": "Let's stand by our original policy",
                 "next": "29",
                 "profitChange": 0,
                 "legitimacyChange": 0
             },
             {
-                "text": "Revise our policy for cultural context",
-                "next": "30a",
+                "text": "What could we do to improve moderation?",
+                "next": "30b",
                 "profitChange": 0,
                 "legitimacyChange": 0
             }
@@ -274,7 +268,7 @@ const gameData =
             {
                 "text": "Let's see how this plays out",
                 "next": "32",
-                "profitChange": 0,
+                "profitChange": -20,
                 "legitimacyChange": 0
             }
         ]
@@ -282,36 +276,17 @@ const gameData =
     {
         "id": "3",
         "type": "choice",
-        "text": "Great! Now, let's jump right in. A memo just arrived on your desk. It seems that Connectopia has a new AI system for fighting bots by identifying coordinated behaviour. The problem is: It is flagging tourists' selfies in front of famous landmarks as \"suspicious repetitive behavior\"! Travel bloggers and tourism boards are up in arms. What do you want to do?",
+        "text": "Great! Now, let's jump right in. A memo just arrived on your desk. It seems that Connectopia has a new AI system for fighting bots by identifying coordinated behaviour. The problem is: It is flagging tourists' selfies in front of famous landmarks as \"suspicious repetitive behavior\"! Travel bloggers and tourism boards are up in arms. What would you suggest we do?",
         "choices": [
             {
-                "text": "Adjust the AI to ignore tourist hotspots",
+                "text": "Could we turn it off around tourist hotspots?",
                 "next": "4",
                 "profitChange": -20,
                 "legitimacyChange": 10
             },
             {
-                "text": "Keep the current AI settings",
+                "text": "Let's just do nothing and see what happens",
                 "next": "5",
-                "profitChange": 0,
-                "legitimacyChange": 0
-            }
-        ]
-    },
-    {
-        "id": "30a",
-        "type": "choice",
-        "text": "Before we make a final decision, I think we should review how this moderation decision was made in the first place. What do you say?",
-        "choices": [
-            {
-                "text": "How was this moderated?",
-                "next": "30b",
-                "profitChange": 0,
-                "legitimacyChange": 0
-            },
-            {
-                "text": "Let's just decide",
-                "next": "28",
                 "profitChange": 0,
                 "legitimacyChange": 0
             }
@@ -323,46 +298,14 @@ const gameData =
         "text": "Well, our moderation is outsourced. The moderators don't necessarily speak Korean; content is automatically translated. We use a list of derogatory terms for groups of people that was created two years ago.",
         "choices": [
             {
-                "text": "Can we make a press release about this?",
-                "next": "30c",
-                "profitChange": 0,
-                "legitimacyChange": 0
-            },
-            {
-                "text": "Can we hire more moderators quietly?",
-                "next": "30d",
-                "profitChange": 0,
-                "legitimacyChange": 0
-            }
-        ]
-    },
-    {
-        "id": "30c",
-        "type": "choice",
-        "text": "A press release could be a good idea. What should we focus on in the statement?",
-        "choices": [
-            {
-                "text": "Consult Korean cultural representatives",
-                "next": "30e",
-                "profitChange": 0,
-                "legitimacyChange": 0
-            },
-            {
-                "text": "Train moderators on local culture",
+                "text": "We need to move the moderation work to Korea!",
                 "next": "30f",
                 "profitChange": 0,
                 "legitimacyChange": 0
-            }
-        ]
-    },
-    {
-        "id": "30d",
-        "type": "choice",
-        "text": "Alright, we'll hire more moderators to handle these issues, but keep it low-key. Just keep in mind, this might improve moderation quality but won't address the public concern.",
-        "choices": [
+            },
             {
-                "text": "Let's see how this plays out",
-                "next": "30g",
+                "text": "Let's run a consultation improving the guidelines",
+                "next": "30e",
                 "profitChange": 0,
                 "legitimacyChange": 0
             }
@@ -371,7 +314,7 @@ const gameData =
     {
         "id": "30e",
         "type": "choice",
-        "text": "Okay, we'll announce that we'll consult representatives of different cultural groups in Korea. This shows commitment to understanding, but it might raise expectations.",
+        "text": "Alright, I'll prepare a press release about this. We'll announce that we'll consult representatives of different cultural groups in Korea. They will revise the instructions and provide guidance on what is culturally acceptable. This shows commitment to understanding, but it might raise expectations..",
         "choices": [
             {
                 "text": "Let's see how this plays out",
@@ -384,17 +327,11 @@ const gameData =
     {
         "id": "30f",
         "type": "choice",
-        "text": "Alright, we'll announce that we'll train moderators on local culture. This demonstrates a proactive approach, but it might be seen as insufficient by some.",
+        "text": "Alright, I'll prepare a press release about this. Korean content should be moderated by actual Korean people, and we are bringing back some of the outsourced operations..",
         "choices": [
             {
                 "text": "Let's see how this plays out",
-                "next": "30g",
-                "profitChange": 0,
-                "legitimacyChange": 0
-            },
-            {
-                "text": "On second thought, let's reconsider",
-                "next": "30c",
+                "next": "30h",
                 "profitChange": 0,
                 "legitimacyChange": 0
             }
@@ -403,10 +340,23 @@ const gameData =
     {
         "id": "30g",
         "type": "choice",
-        "text": "Well, despite our efforts, there's further mockery of our social media policies online. The situation has become more complex.",
+        "text": "It looks like our press release on cultural sensitivity consultations didn't receive much attention.. But the controversy about the poem seems to have died down altogether! I think we dodged a bullet here.",
         "choices": [
             {
-                "text": "Let's move on to the next challenge",
+                "text": "Great! Let's move on to the next challenge!",
+                "next": "35",
+                "profitChange": 0,
+                "legitimacyChange": 0
+            }
+        ]
+    },
+    {
+        "id": "30h",
+        "type": "choice",
+        "text": "Our press press release seems to be getting a lot of attention.. Many journalists only now realise that we had outsourced this work in the first place! I can see commentators penning columns about our disregard of labour standards, and how unfitting this work is for people. I have to call the PR department for a crisis response.",
+        "choices": [
+            {
+                "text": "Uh oh.. I think we're done for today",
                 "next": "35",
                 "profitChange": 0,
                 "legitimacyChange": 0
@@ -416,21 +366,15 @@ const gameData =
     {
         "id": "32",
         "type": "choice",
-        "text": "Based on your decision, here's what happened: (The game would provide different outcomes based on the choice made)",
+        "text": "Users start sharing AI-generated versions of the controversial poem, but with Connectopia's CEO inserted as the narrator. The sentiment seems to be that removing the poem is an overreach, especially since the Oversight Board recommended against it. The platform’s PR team scrambles to respond, only for the hashtag #PoeticJustice to trend worldwide.",
         "choices": [
             {
-                "text": "I think we're done for today",
+                "text": "Uh oh.. I think we're done for today",
                 "next": "35",
                 "profitChange": 0,
                 "legitimacyChange": 0
             }
         ]
-    },
-    {
-        "id": "34",
-        "type": "choice",
-        "text": "(Next challenge would start here)",
-        "choices": []
     },
     {
         "id": "35",
@@ -446,15 +390,9 @@ const gameData =
         ]
     },
     {
-        "id": "36",
-        "type": "choice",
-        "text": "Thank you for your time! We hope this experience has given you insights into the challenges of social media content moderation. Have a great day!",
-        "choices": []
-    },
-    {
         "id": "4",
         "type": "choice",
-        "text": "So, we tweaked the AI. Good news: tourists are back to flooding feeds with landmark selfies. Bad news: some spam's sneaking through now. Users are happier, but our content quality? Let's just say it's seen better days. Some people are turning away from the Connectopia, and our profits took a hit.",
+        "text": "So, we tweaked the AI. Good news: tourist selfies are back. Bad news: some spam's sneaking through now. Users are happier, but our content quality? Let's just say it's seen better days. We are seeing a reduction in users, and our profits took a hit. Please remember, your job is to keep both legitimacy and profit afloat..",
         "choices": [
             {
                 "text": "Oh great",
@@ -473,7 +411,7 @@ const gameData =
     {
         "id": "5",
         "type": "choice",
-        "text": "We kept the AI as is. The platform's squeaky clean now, but our travel sector numbers? Yikes. It's like we've become the fun police of tourism. Content quality's up, but we have a lot of angry people accusing us of using biased automated system. Our legitimacy took a hit.",
+        "text": "We kept the AI as is. The platform's squeaky clean now, but our travel sector numbers? Yikes. It's like we've become the fun police of tourism. Content quality's up, but we have a lot of angry people accusing us of using biased automated system. Our legitimacy took a hit. Please remember, your job is to keep both legitimacy and profit afloat..",
         "choices": [
             {
                 "text": "Oh great",
@@ -503,18 +441,31 @@ const gameData =
         ]
     },
     {
-        "id": "section",
-        "type": "choice",
-        "text": "Fill in here",
-        "choices": []
+        "id": "end",
+        "type": "section_break",
+        "text": "You have reached the end of the game.\nYour score is 123 points! Share to see if your friends can could beat your score?",
+        "choices": [
+            {
+                "text": "Share with your friend!",
+                "next": "share",
+                "profitChange": 0,
+                "legitimacyChange": 0
+            },
+            {
+                "text": "Start again",
+                "next": "beginning",
+                "profitChange": 0,
+                "legitimacyChange": 0
+            }
+        ]
     },
     {
         "id": "section2",
         "type": "section_break",
-        "text": "Section change: Generative AI and elections",
+        "text": "Congratulations, you have finished the section on content moderation!\nClick here to learn more about the topic. (link to InfoLead toolkit on the topic coming later)",
         "choices": [
             {
-                "text": "Let's go!",
+                "text": "Let's continue!",
                 "next": "section2_1",
                 "profitChange": 0,
                 "legitimacyChange": 0
@@ -598,13 +549,13 @@ const gameData =
         "choices": [
             {
                 "text": "Well, that backfired spectacularly.",
-                "next": "section 3",
+                "next": "section3",
                 "profitChange": 0,
                 "legitimacyChange": 0
             },
             {
                 "text": "Back to the drawing board, I guess.",
-                "next": "section 3",
+                "next": "section3",
                 "profitChange": 0,
                 "legitimacyChange": 0
             }
@@ -649,13 +600,13 @@ const gameData =
         "choices": [
             {
                 "text": "Great, I always wanted to be a dinosaur when I grew up.",
-                "next": "section 3",
+                "next": "section3",
                 "profitChange": 0,
                 "legitimacyChange": 0
             },
             {
                 "text": "Do you think the lizard me has better approval ratings?",
-                "next": "section 3",
+                "next": "section3",
                 "profitChange": 0,
                 "legitimacyChange": 0
             }
@@ -687,13 +638,13 @@ const gameData =
         "choices": [
             {
                 "text": "Great, we've become the fun police.",
-                "next": "section 3",
+                "next": "section3",
                 "profitChange": 0,
                 "legitimacyChange": 0
             },
             {
                 "text": "Maybe we should've thought this through a bit more...",
-                "next": "section 3",
+                "next": "section3",
                 "profitChange": 0,
                 "legitimacyChange": 0
             }
@@ -719,13 +670,13 @@ const gameData =
         "choices": [
             {
                 "text": "Well, you can't make an omelet without breaking a few eggs.",
-                "next": "section 3",
+                "next": "section3",
                 "profitChange": 0,
                 "legitimacyChange": 0
             },
             {
                 "text": "Maybe we should've stuck to cat videos after all.",
-                "next": "section 3",
+                "next": "section3",
                 "profitChange": 0,
                 "legitimacyChange": 0
             }
@@ -851,6 +802,25 @@ const gameData =
                 "legitimacyChange": 0
             }
         ]
+    },
+    {
+        "id": "section3",
+        "type": "section_break",
+        "text": "Congratulations, you have finished the section on generative AI!\nClick here to learn more about the topic. (link to InfoLead toolkit on the topic coming later)",
+        "choices": [
+            {
+                "text": "Hooray!",
+                "next": "end",
+                "profitChange": 0,
+                "legitimacyChange": 0
+            }
+        ]
+    },
+    {
+        "id": "share",
+        "type": "section_break",
+        "text": "",
+        "choices": []
     }
 ];
 

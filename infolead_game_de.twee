@@ -1,0 +1,206 @@
+:: StoryTitle
+Social Media Middle Management Game v3.2 (German)
+:: StoryData
+{
+"ifid": "C23BFE4A-A576-474F-9687-9CCDCDA18B46",
+"format": "Harlowe",
+"format-version": "3.3.9",
+"start": "beginning",
+"zoom": 0.6
+}
+:: 0 {"position":"150,0","size":"100,100"}
+Hey, wie geht's? Willkommen!
+[[Oh hey|1]]
+[[Ähm, wer bist du?|2]]
+:: 1 {"position":"300,0","size":"100,100"}
+Schön dich kennenzulernen! Du bist hier, um deine neue Position als VP of Information Disorder Responses bei Connectopia, Amerikas am schnellsten wachsender Social-Media-Plattform, anzutreten. Ich bin Jamie, ich werde als dein Assistent arbeiten. Toll, dich an Bord zu haben!
+[[Danke, ich freue mich hier zu sein!|3]]
+[[Klingt herausfordernd. Was genau soll ich tun?|3]]
+:: 2 {"position":"325,200","size":"100,100"}
+Oh, entschuldige, dass ich mich nicht vorgestellt habe! Ich bin Jamie, ich bin der Assistant Resilient Strategist, mit dem du zusammenarbeiten wirst. Du bist hier, um deine neue Position als VP of Information Disorder Management bei Connectopia, Amerikas am schnellsten wachsender Social-Media-Plattform, anzutreten. Wir haben dich schon erwartet!
+[[Ah, ich verstehe. Schön dich kennenzulernen, Jamie.|3]]
+[[Richtig, natürlich. Lass uns dann anfangen.|3]]
+
+:: 3 {"position":"450,75","size":"100,100"}
+Großartig! Lass uns gleich loslegen. Eine Memo ist gerade auf deinem Schreibtisch gelandet. Anscheinend hat Connectopia ein neues KI-System zur Bekämpfung von Bots, das koordiniertes Verhalten erkennt. Das Problem ist: Es markiert Selfies von Touristen vor berühmten Sehenswürdigkeiten als "verdächtiges repetitives Verhalten"! Reiseblogger und Tourismusverbände sind in Aufruhr. Was würdest du vorschlagen?
+[[Könnten wir es an touristischen Hotspots ausschalten?|4]]
+[[Lass uns einfach nichts tun und abwarten|5]]
+:: 4 {"position":"600,25","size":"100,100"}
+(set: $legitimacy to it + 10)
+(set: $profit to it - 20)
+Also, wir haben die KI angepasst. Gute Nachricht: Touristen-Selfies sind wieder da. Schlechte Nachricht: Jetzt schleicht sich wieder Spam durch. Die Nutzer sind zufriedener, aber unsere Inhaltsqualität? Sagen wir mal, sie hat schon bessere Tage gesehen. Wir verzeichnen einen Rückgang der Nutzerzahlen, und unsere Gewinne haben einen Einbruch erlitten. Denk dran, dein Job ist es, sowohl Legitimität als auch Profit aufrechtzuerhalten.
+[[Oh super|20]]
+[[Oh nein|20]]
+:: 5 {"position":"600,225","size":"100,100"}
+Wir haben die KI so gelassen wie sie ist. Die Plattform ist jetzt zwar blitzsauber, aber unsere Zahlen im Reisesektor? Autsch. Es ist, als wären wir zur Spaßpolizei des Tourismus geworden. Die Inhaltsqualität ist zwar gestiegen, aber wir haben viele wütende Menschen, die uns vorwerfen, ein voreingenommenes automatisiertes System zu verwenden. Unsere Legitimität hat einen Schlag abbekommen. Denk dran, dein Job ist es, sowohl Legitimität als auch Profit aufrechtzuerhalten.
+[[Oh super|20]]
+[[Oh nein|20]]
+:: 20 {"position":"775,50","size":"100,100"}
+Alright, wir haben eine weitere Situation zu bewältigen. Ein koreanisches Gedicht sorgt auf unserer Plattform für Aufregung. Wie möchtest du damit umgehen?
+[[Erzähl mir mehr darüber, Jamie|21]]
+[[Warum ist ein Gedicht kontrovers?|21]]
+:: 21 {"position":"825,300","size":"100,100"}
+Nun, das Gedicht handelt von der geplanten Verlegung einer Büste von General Hong Beom-Do. Er war eine wichtige Persönlichkeit im Korea des frühen 20. Jahrhunderts und führte die koreanische Unabhängigkeitsarmee gegen japanische Streitkräfte an.
+[[Warum sorgt das für Kontroversen?|22]]
+:: 22 {"position":"925,100","size":"100,100"}
+Die Kontroverse entsteht durch die Verwendung des Begriffs 'wae-nom' im Gedicht. Es bedeutet wörtlich 'Person aus Japan', wird aber oft als abwertender Begriff verwendet, besonders in historischen Kontexten.
+[[Kannst du mich über unsere Content-Richtlinien informieren?|23]]
+[[Was ist mit dem Beitrag passiert?|24]]
+
+:: 23 {"position":"1050,0","size":"100,100"}
+Unsere Content-Richtlinien sind ziemlich klar, dass Hassrede nicht erlaubt ist. Aber es wird knifflig, wenn wir entscheiden müssen, welche Wörter tatsächlich abwertend gegenüber Gruppen sind und welche nicht. Es ist eine heikle Balance zwischen freier Meinungsäußerung und Schadensvermeidung.
+[[Was ist mit diesem konkreten Beitrag passiert?|24]]
+[[Hatten wir schon mal einen ähnlichen Fall?|25]]
+:: 24 {"position":"1050,300","size":"100,100"}
+Zunächst haben wir den Inhalt wegen Verstoßes gegen unsere Hassrede-Richtlinien entfernt. Aber diese Entscheidung hat einen ziemlichen Skandal ausgelöst, und jetzt posten noch mehr Nutzer das Gedicht aus Protest.
+[[Hatten wir schon ähnliche Fälle?|25]]
+[[Was denkst du, sollten wir jetzt tun?|26]]
+:: 25 {"position":"1200,25","size":"100,100"}
+Ja, wir hatten einige ähnliche Fälle. Erinnerst du dich an den Fall des russischen Gedichts? Wir haben zunächst einen Beitrag entfernt, der Russen beleidigte und ihre Armee mit Nazis verglich. Der Vorstand hat diese Entscheidung aufgehoben und die Bedeutung des Kontexts betont.
+[[Erzähl mir mehr|25a]]
+[[Was sollten wir jetzt tun?|26]]
+:: 25a {"position":"1325,150","size":"100,100"}
+Wir hatten auch Fälle wie 'Rückgewinnung arabischer Wörter', bei denen kulturelle und sprachliche Missverständnisse zu einer falschen Durchsetzung unserer Richtlinien führten. Es ist ein komplexes Thema.
+[[Was sollten wir jetzt tun?|26]]
+[[Warum wird das an mich eskaliert?|26a]]
+:: 26 {"position":"1425,0","size":"100,100"}
+Nun, hier ist die Sache. Unser Connectopia Oversight Board hat die Situation überprüft und gegen unsere frühere Entscheidung entschieden, Beiträge mit dem Gedicht zu entfernen. Wir müssen entscheiden, wie wir damit umgehen.
+[[Was ist das Oversight Board?|27]]
+[[Was sind unsere Optionen?|28]]
+
+:: 26a {"position":"1525,200","size":"100,100"}
+Dieser Fall wurde an dich eskaliert, weil unser Connectopia Oversight Board ihn überprüft und gegen unsere frühere Entscheidung zur Entfernung der Inhalte entschieden hat. Das ist eine große Sache.
+[[Was ist das Oversight Board?|27]]
+[[Was sind unsere Optionen?|28]]
+:: 27 {"position":"1675,25","size":"100,100"}
+Das Connectopia Oversight Board ist ein unabhängiges Gremium, das unsere Content-Moderationsentscheidungen überprüft. Sie geben Empfehlungen darüber ab, ob bestimmte Inhalte erlaubt oder entfernt werden sollten. Die Empfehlungen sind, zumindest im Prinzip, bindend.
+[[Was sind unsere Optionen?|28]]
+[[Lass uns eine Entscheidung treffen|28]]
+:: 28 {"position":"1875,25","size":"100,100"}
+Wir haben zwei Hauptoptionen. Wir können entweder an unserer ursprünglichen Richtlinie festhalten oder sie überarbeiten, um den kulturellen Kontext zu berücksichtigen. Was meinst du?
+[[Lass uns an unserer ursprünglichen Richtlinie festhalten|29]]
+[[Was könnten wir tun, um die Moderation zu verbessern?|30b]]
+:: 29 {"position":"2025,150","size":"100,100"}
+Also gut, du hast dich entschieden, an der ursprünglichen Richtlinie festzuhalten. Das könnte zwar für Konsistenz sorgen, aber ich sollte dich warnen, es könnte zu weiteren Kontroversen und Nutzerunzufriedenheit führen.
+[[Mal sehen, wie sich das entwickelt|32]]
+:: 30b {"position":"2250,150","size":"100,100"}
+Nun, unsere Moderation ist ausgelagert. Die Moderatoren sprechen nicht unbedingt Koreanisch; Inhalte werden automatisch übersetzt. Wir verwenden eine Liste von abwertenden Begriffen für Personengruppen, die vor zwei Jahren erstellt wurde.
+[[Wir müssen die Moderationsarbeit nach Korea verlagern!|30f]]
+[[Lasst uns eine Konsultation zur Verbesserung der Richtlinien durchführen|30e]]
+
+:: 30e {"position":"2575,275","size":"100,100"}
+In Ordnung, ich werde eine Pressemitteilung vorbereiten. Wir werden ankündigen, dass wir Vertreter verschiedener kultureller Gruppen in Korea konsultieren werden. Sie werden die Anweisungen überarbeiten und Orientierung geben, was kulturell akzeptabel ist. Das zeigt Engagement für Verständnis, könnte aber Erwartungen wecken.
+[[Mal sehen, wie sich das entwickelt|30g]]
+:: 30f {"position":"2550,75","size":"100,100"}
+In Ordnung, ich werde eine Pressemitteilung vorbereiten. Koreanische Inhalte sollten von echten Koreanern moderiert werden, und wir holen einige der ausgelagerten Tätigkeiten zurück.
+[[Mal sehen, wie sich das entwickelt|30h]]
+:: 30g {"position":"2825,525","size":"100,100"}
+(set: $legitimacy to it +10)
+Es scheint, dass unsere Pressemitteilung über kulturelle Sensibilitätskonsultationen nicht viel Aufmerksamkeit bekommen hat... Aber die Kontroverse um das Gedicht scheint sich komplett gelegt zu haben! Ich glaube, wir sind da einer Kugel ausgewichen.
+[[Großartig! Lass uns zur nächsten Herausforderung übergehen!|35]]
+:: 30h {"position":"2825,175","size":"100,100"}
+(set: $legitimacy to it -20)
+Unsere Pressemitteilung scheint viel Aufmerksamkeit zu bekommen... Viele Journalisten realisieren erst jetzt, dass wir diese Arbeit überhaupt ausgelagert hatten! Ich sehe Kommentatoren, die Kolumnen über unsere Missachtung von Arbeitsstandards schreiben, und wie ungeeignet diese Arbeit für Menschen ist. Ich muss die PR-Abteilung für eine Krisenreaktion anrufen.
+[[Uh oh... Ich denke, wir sind für heute fertig|35]]
+:: 32 {"position":"1750,225","size":"100,100"}
+(set: $legitimacy to it -20)
+(set: $profit to it - 20)
+Nutzer beginnen, KI-generierte Versionen des umstrittenen Gedichts zu teilen, aber mit Connectopias CEO als Erzähler. Die Stimmung scheint zu sein, dass das Entfernen des Gedichts ein Übergriff ist, besonders da das Oversight Board davon abgeraten hatte. Das PR-Team der Plattform versucht hastig zu reagieren, nur damit der Hashtag #PoeticJustice weltweit trendet.
+[[Uh oh... Ich denke, wir sind für heute fertig|35]]
+
+:: 35 {"position":"1575,475","size":"100,100"}
+Danke für deine harte Arbeit heute! Lass uns Schluss machen und morgen weitermachen.
+[[OK bis morgen|section2]]
+:: beginning {"position":"0,0","size":"100,100"}
+(set: $legitimacy to 50)
+(set: $profit to 50)
+<!--Section break-->
+Willkommen beim Social Media Middle Management! Kannst du deine Plattform steuern, ohne in eine Krise zu geraten?
+[[Spiel starten|0]]
+:: section2 {"position":"1200,700","size":"100,100"}
+<!--Section break-->
+Herzlichen Glückwunsch, du hast den Abschnitt über Content-Moderation abgeschlossen!
+Klicke hier, um mehr über das Thema zu erfahren. (Link zum InfoLead-Toolkit zum Thema folgt später)
+[[Lass uns weitermachen!|section2_1]]
+:: section2_1 {"position":"1200,850","size":"100,100"}
+Guten Morgen! Hier ist wieder Jamie. Bereit für etwas digitales Drama? Ich hoffe, du hattest deinen Kaffee, denn wir haben einen echten Knüller für dich!
+[[Leg los, Jamie! Ich bin koffeiniert und bereit!|section2_2]]
+:: section2_2 {"position":"1200,1000","size":"100,100"}
+In Neuseeland findet eine Wahl statt. Zwei Parteien liegen Kopf an Kopf. Eine hat gerade Angriffswerbung auf unserer Plattform erstellt, die sich gegen die andere Partei richtet.
+[[Wie betrifft uns das?|section2_3]]
+[[Was ist das Problem?|section2_3]]
+
+:: section2_3 {"position":"1200,1125","size":"100,100"}
+Diese Angriffswerbung? Das ist nicht dein gewöhnliches Schlammwerfen. Sie nutzen generative KI, um ihre Inhalte zu erstellen. Genau, wir reden hier von Deepfakes, Stimmklonen, das volle Programm.
+[[Generative was? Ich glaube, ich brauche ein Tech-Wörterbuch, um da mitzukommen!|section2genexp]]
+[[Bitte sag mir, dass wir eine Regel gegen gefälschte politische Medien haben?|section2rules]]
+:: section2genexp {"position":"1075,1275","size":"100,100"}
+Generative KI ist eine Art künstliche Intelligenz, die neue Inhalte erstellen kann, einschließlich realistischer Audio- und Videoaufnahmen. Sie kann es so aussehen lassen, als würden echte Menschen Dinge sagen oder tun, die sie nie gesagt oder getan haben. Zum Beispiel könnte sie ein Video eines Politikers erstellen, der eine Rede hält, die er nie gehalten hat, oder eine Audioaufnahme eines Prominenten, der ein Produkt bewirbt, das er nie unterstützt hat.
+[[Ach ja, davon habe ich gehört|section2rules]]
+[[Man kann heutzutage wirklich nichts mehr glauben!|section2rules]]
+:: section2rules {"position":"1275,1300","size":"100,100"}
+Unsere Plattformregeln sind da ziemlich eindeutig: Das täuschende Erstellen gefälschter Videos von Menschen ist nicht erlaubt. Allerdings haben wir eine Ausnahme für Satire und Parodie. Der Haken ist, dass diese satirischen oder parodistischen Deepfakes in ihrer Absicht offensichtlich sein und entsprechend gekennzeichnet werden müssen. Das ist unser Versuch, freie Meinungsäußerung mit der Verhinderung schädlicher Fehlinformationen in Einklang zu bringen.
+[[Heißt das, wir können Deepfake-Wahlwerbung verbieten?|section2campaigns]]
+
+:: section2campaigns {"position":"1275,1425","size":"100,100"}
+Tja, rate mal. Die Kampagne behauptet jetzt, dass all ihre KI-generierten Inhalte "offensichtlich Satire" seien. Ihrer Meinung nach bleiben sie damit völlig im Rahmen unserer Plattform-Richtlinien. Wir stecken hier in der Zwickmühle - nehmen wir ihre Behauptung für bare Münze, oder riskieren wir, der selektiven Durchsetzung beschuldigt zu werden?
+[[Ah! Was ist mit einem Verbot aller Deepfakes, auch Satire?|section2parody]]
+[[Gibt es eine Möglichkeit, die Deepfakes für die Leute offensichtlicher zu machen?|section2flags]]
+:: section2flags {"position":"1125,1575","size":"100,100"}
+Eine Lösung, zu der wir uns verpflichtet haben, ist das Platzieren von "Mit KI erstellt"-Kennzeichnungen auf allen KI-generierten Inhalten. So sollten Nutzer leicht erkennen können, wenn sie synthetische Inhalte ansehen. Die Idee ist, Transparenz zu wahren und unseren Nutzern zu helfen, informierte Entscheidungen über die Inhalte zu treffen, die sie konsumieren. Es ist keine perfekte Lösung, aber ein Schritt in Richtung größerer Klarheit auf unserer Plattform.
+[[Na, das wird das Problem sicher lösen!|section2flags2]]
+[[Setzen wir die Kennzeichnungen auch wirklich um?|section2flags2]]
+:: section2flags2 {"position":"1125,1725","size":"100,100"}
+Einige sorgfältige Forscher haben unsere Plattform durchkämmt und ihre Ergebnisse sind... nicht gerade toll. Sie haben eine beträchtliche Menge an KI-generierten Inhalten entdeckt, die nicht ordnungsgemäß gekennzeichnet sind. Anscheinend ist unser aktuelles Kennzeichnungssystem nicht so effektiv wie erhofft. Das wirft Fragen zur Praktikabilität und Durchsetzung unserer KI-Inhalts-Richtlinie auf.
+[[Könnten wir die Kennzeichnungen einfach größer machen?|section2improveflags]]
+[[Wir sollten besser hart gegen gefälschte Inhalte vorgehen|section2ban]]
+
+:: section2improveflags {"position":"1050,1850","size":"100,100"}
+Was genau schlägst du vor?
+[[Leute einstellen, um die automatische Erkennung zu verbessern|section2auto]]
+[[Die Kennzeichnungen größer und auffälliger machen|section2biggerflags]]
+:: section2auto {"position":"900,1975","size":"100,100"}
+Wir sind dran! Ich habe unsere besten Ingenieure darauf angesetzt. Sie arbeiten rund um die Uhr an der Entwicklung eines Algorithmus, der KI-generierte Inhalte effektiver erkennen kann. Es ist ein großes Unterfangen, aber wenn jemand das schaffen kann, dann unser Team.
+[[Toll! Das sollte es lösen.|section2auto2]]
+[[Ich hoffe, das funktioniert...|section2auto2]]
+:: section2auto2 {"position":"900,2100","size":"100,100"}
+(set: $legitimacy to it -20)
+Nun, unser Ingenieurteam hat geliefert, aber wir scheinen auf ein Problem gestoßen zu sein. Nutzer haben begonnen, unseren neuen Algorithmus auszutricksen. Sie erstellen absichtlich Inhalte, die unsere KI-Erkennung auslösen, auch wenn sie tatsächlich echt sind. Obendrein machen sie ein Spektakel aus jedem echten Medium, das fälschlicherweise als gefälscht markiert wird. Es entwickelt sich zu einem Spiel "Fang die KI" da draußen, und wir gewinnen nicht gerade.
+[[Nun, das ist spektakulär nach hinten losgegangen.|section3]]
+[[Zurück ans Reißbrett, schätze ich.|section3]]
+:: section2ban {"position":"1475,1825","size":"100,100"}
+Was schlägst du vor?
+[[Ein Exempel an dieser politischen Kampagne statuieren, sie verbannen|section2bancampaign]]
+[[Alle Deepfake-Inhalte auf der gesamten Plattform verbieten|section2bandeepfake]]
+
+:: section2bancampaign {"position":"1375,1975","size":"100,100"}
+Alright, wir werden aktiv. Ich werde das Konto der betreffenden politischen Kampagne einfrieren. Wir werden einen Verstoß gegen die Richtlinien als Grund angeben. Es ist ein mutiger Schritt, aber manchmal muss man zeigen, dass man es ernst meint.
+[[Na, das sollte es erledigen!|section2bancampaign2]]
+:: section2bancampaign2 {"position":"1375,2100","size":"100,100"}
+(set: $legitimacy to it -20)
+Die Kampagne, die wir gesperrt haben, hat eine komplette 180-Grad-Wendung hingelegt. Sie positionieren sich jetzt als Verfechter der Meinungsfreiheit, die gegen die "Tyrannei ausländischer Tech-Giganten" kämpfen. Ihr neuer Kampagnenslogan? "Verteidigung der Demokratie vor digitalen Diktatoren." Und stell dir vor - sie haben diese wilden Protestplakate mit deinem Gesicht erstellt... aber sie haben dir ein Echsen-Makeover verpasst. Anscheinend bist du jetzt das Aushängeschild für die "reptilischen Tech-Oberherren."
+[[Toll, ich wollte schon immer ein Dinosaurier werden, wenn ich groß bin.|section3]]
+[[Glaubst du, das Echsen-Ich hat bessere Zustimmungswerte?|section3]]
+:: section2bandeepfake {"position":"1650,1975","size":"100,100"}
+Also gut, wir gehen hier aufs Ganze. Ich werde einen Antrag stellen, unsere Unternehmensrichtlinie zu aktualisieren und die Ausnahme für Parodie und Satire bei Deepfakes zu streichen. Wir werden eine Pressemitteilung verfassen, die erklärt, dass dies ein notwendiger Schritt in unserem anhaltenden Kampf gegen Fehlinformationen ist. Wir werden es als unseren Einsatz für Wahrheit im digitalen Zeitalter darstellen.
+[[OK, das sollte es lösen!|section2bandeepfake2]]
+[[Ich hoffe, wir überreagieren nicht...|section2bandeepfake2]]
+:: section2bandeepfake2 {"position":"1650,2100","size":"100,100"}
+(set: $legitimacy to it -20)
+Nun, unser Verbot von Deepfakes hat definitiv Wellen geschlagen, aber nicht ganz die, die wir erwartet haben. Stellt sich heraus, wir haben versehentlich die Hälfte der beliebtesten Internet-Memes verboten. Unsere Nutzer sind in Aufruhr, weil sie ihre Lieblings-"Singender Biden"-Videos oder "Shakespeare liest fiese Tweets"-Clips nicht mehr posten können. Oh, und erinnerst du dich an diese Blockbuster-Filmreihe, die Verjüngungstechnologie verwendet? Ja, wir mussten all ihre Werbeinhalte entfernen.
+[[Toll, wir sind zur Spaßpolizei geworden.|section3]]
+[[Vielleicht hätten wir das besser durchdenken sollen...|section3]]
+:: section3 {"position":"1100,2300","size":"100,100"}
+<!--Section break-->
+Herzlichen Glückwunsch, du hast den Abschnitt über generative KI abgeschlossen!
+Klicke hier, um mehr über das Thema zu erfahren. (Link zum InfoLead-Toolkit zum Thema folgt später)
+[[Hurra!|end]]
+:: end {"position":"550,2375","size":"100,100"}
+<!--Section break-->
+Du hast das Ende des Spiels erreicht.
+Deine Punktzahl beträgt 123 Punkte! Teile es, um zu sehen, ob deine Freunde deine Punktzahl schlagen können!
+[[Mit deinem Freund teilen!|share]]
+[[Noch einmal spielen|beginning]]
+:: share {"position":"550,2500","size":"100,100"}
+<!--Section break-->
+
